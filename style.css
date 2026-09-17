@@ -55,6 +55,7 @@
     color: white;
     background-color: var(--dark-brown); 
     font-size: 0.55rem;
+    letter-spacing: 1px;
     padding: 6px 10px;
     border: 2px solid var(--dark-green);
     display: flex;
