@@ -1,27 +1,24 @@
 /* COLOR VARIABLES  */
 
 :root {
-    --dark-brown: #412815;
+--dark-brown: #412815;
     --medium-brown: #5C3A21;
     --light-brown: #7a4e2d;
-
     --lime-green: #99bd17;       
     --dark-green: #0e2310;     
     --medium-green: #16290f;
     --light-green: #457236;
-
     --shadow: rgba(0, 0, 0, 0.711);
-
-    --light-pink: rgb(235 227 213);
-    --medium-pink: rgb(204, 190, 166);
-
-    --orange: rgb(184 93 56);
+    --light-pink: #ebe3d5;       
+    --medium-pink: #ccbea6;      
+    --orange: #b85d38;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* --- HEADER --- */
@@ -91,7 +88,6 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
-    /* box-shadow: var(--dark-green);  */
 }
 
 .nav-link:hover {
@@ -220,6 +216,7 @@
     color: white;
     font-family: 'Press Start 2P', monospace;
     font-size: 0.6rem;
+    letter-spacing: 1px;
     margin: 0;
 }
 
@@ -231,11 +228,13 @@
 }
 
 .about-avatar-box {
+    position:relative;
     background-color: var(--medium-pink);
     border: 2px solid var(--dark-green);
     width: 30%;
-    height: 40%;
+    height: 260px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -250,9 +249,18 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-image: url('AvatarBruxa.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.2s ease;
+} 
+
+.about-avatar-box:hover .avatar-placeholder {
+    background-image: url('ProfilePicture.jpeg');
 }
 
 .about-me-image {
+    display: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -260,11 +268,13 @@
 
 .avatar-tag {
     position: absolute;
-    bottom: 8px;
+    bottom: 6px;
     background-color: var(--orange);
     color: white;
     font-family: 'Press Start 2P', monospace;
-    font-size: 0.5rem;
+    letter-spacing: 1px;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
     padding: 4px 8px;
     border: 2px solid var(--dark-green);
 }
@@ -280,7 +290,7 @@
     font-family: 'Press Start 2P', monospace;
     font-size: 0.7rem;
     color: var(--dark-green);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .about-bio-box {
@@ -301,13 +311,14 @@
 
 .about-links .pixel-btn {
     flex: 1;
-    background-color: var(--light-pink);
+    background-color: var(--medium-pink);
     color: black;
     border: 2px solid var(--dark-green);
     padding: 10px;
     text-align: center;
     font-family: 'Press Start 2P', monospace;
-    font-size: 0.45rem;
+    font-size: 0.55rem;
+    letter-spacing: 1px;
     text-decoration: none;
     font-weight: bold;
     box-shadow: 3px 3px 0px var(--shadow);
