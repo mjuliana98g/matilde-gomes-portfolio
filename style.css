@@ -444,7 +444,7 @@ body {
 /* --- SECTION EXPERIENCE --- */
 
 .experience-section {
-    width: 95%;
+    width: 100%;
     max-width: 1100px;
     margin: 30px auto 10px auto; 
     background-color: var(--light-pink);
@@ -875,7 +875,7 @@ body {
 
     /* Section Experience */
     .experience-section {
-        width: calc(100% - 20px);
+        width: 92%;
         margin: 20px auto 0 auto;
         scroll-margin-top: 140px;
     }
