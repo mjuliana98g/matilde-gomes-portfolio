@@ -21,6 +21,12 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: white; 
+    background-image: radial-gradient(circle, #2d3732 0.5px, transparent 0.5px);
+    background-size: 15px 15px;
+}
+
 /* --- HEADER --- */
 
 .site-header {
