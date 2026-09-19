@@ -683,6 +683,45 @@
     box-shadow: 3px 3px 0px var(--dark-green);
 }
 
+/* --- FOOTER --- */
+
+.site-footer {
+    background-color: var(--medium-brown);
+    border-top: 1px solid var(--dark-green);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1100px;  
+    margin: 0 auto;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    gap: 20px;
+}
+
+.save-title {
+    background-color: var(--medium-green);
+    border: 2px solid var(--light-brown);
+    color: var(--lime-green);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.50rem;
+    padding: 10px 16px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer-copy {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
 /* RESPONSIVE DESIGN  */
 
 @media screen and (max-width: 767px) {
@@ -882,6 +921,26 @@
     .article-title {
         font-size: 0.75rem;
     }
+
+    /* Footer */
+    .site-footer {
+        margin-top: 30px;
+    }
+
+    .footer-container {
+        padding: 20px 10px;
+        gap: 15px;
+    }
+
+    .save-title {
+        font-size: 0.45rem;
+        padding: 8px 12px;
+    }
+
+    .footer-copy {
+        font-size: 0.75rem;
+        padding: 0 10px;
+    }
 } 
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -917,12 +976,12 @@
 
     /* Section Experience */
     .experience-section {
-        width: calc(100% - 30px);
+        width: 90%;
         margin: 30px auto 0 auto;
     }
 
     .experience-container {
-        margin: 20px;
+        margin: 15px;
     }
 
     .experience-card-top {
@@ -939,6 +998,16 @@
     }
 
     .scientific-articles-section {
-        margin: 0 20px;
+        margin: 0;
+    }
+    
+    /* Footer */
+    .site-footer {
+        margin-top: 35px;
+    }
+
+    .footer-container {
+        max-width: 90%;
+        padding: 25px 15px;
     }
 }
