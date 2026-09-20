@@ -442,6 +442,164 @@ body {
     text-align: justify;
 }
 
+/* SKILLS SECTION */
+
+.extra-skills-section {
+    width: 95%;
+    max-width: 1000px;
+    margin: 50px auto 50px auto;
+    background-color: var(--light-pink);
+    border: 4px solid var(--dark-green);
+    box-shadow: 3px 3px 0px var(--shadow);
+    scroll-margin-top: 90px;
+}
+
+.extra-skills-section input[type="radio"] {
+    display: none;
+}
+
+.skills-slide {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#slide-hard:checked~.skills-carousel-wrapper .pane-hard,
+#slide-soft:checked~.skills-carousel-wrapper .pane-soft,
+#slide-hobbies:checked~.skills-carousel-wrapper .pane-hobbies {
+    display: flex;
+}
+
+.pane-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--medium-green);
+    padding: 8px 8px;
+}
+
+.pane-header h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: var(--lime-green);
+    letter-spacing: 1px;
+}
+
+.skills-grid-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px 30px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.skill-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-card-item {
+    background-color: white;
+    border: 2px solid var(--dark-green);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+}
+
+.skill-icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skill-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skill-name {
+    font-family: monospace;
+    font-size: 0.80rem;
+    font-weight: bold;
+    color: var(--dark-brown);
+    text-align: center;
+}
+
+.suggestion-form-box {
+    border-top: 2px dashed var(--dark-green);
+    padding-top: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.suggestion-label {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+.suggestion-input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.suggestion-text-input {
+    flex: 1;
+    background-color: white;
+    border: 2px solid var(--dark-green);
+    padding: 8px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.suggestion-submit-btn {
+    background-color: var(--light-brown);
+    border: 2px solid var(--dark-green);
+    padding: 8px 14px;
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.40rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 2px 2px 0px var(--shadow);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.suggestion-submit-btn:hover {
+    background-color: var(--lime-green);
+    color: black;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px var(--dark-green);
+}
+
+.slide-arrow {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.slide-arrow:hover {
+    color: var(--lime-green);
+    transform: translate(-2px, -2px);
+}
+
 /* --- SECTION EXPERIENCE --- */
 
 .experience-section {
@@ -756,7 +914,7 @@ body {
 .card-tags {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .card-web-tags {
@@ -943,6 +1101,48 @@ body {
         flex-direction: column;
     }
 
+    /* Section Extra Skills & Hobbies (Mobile) */
+    .extra-skills-section {
+        width: calc(100% - 20px);
+        margin: 20px auto 0 auto;
+        scroll-margin-top: 140px;
+    }
+
+    .skills-grid-box {
+        gap: 15px 10px;
+        padding: 10px 5px;
+    }
+
+    .skill-card-item {
+        width: 55px;
+        height: 55px;
+        padding: 6px;
+    }
+
+    .skill-icon-box {
+        width: 32px;
+        height: 32px;
+    }
+
+    .skill-name {
+        font-size: 0.7rem;
+    }
+
+    .suggestion-form-box {
+        margin: 10px 5px;
+    }
+
+    .suggestion-input-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .suggestion-submit-btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
     /* Section Education */
     .education-section {
         width: 92%;
@@ -1066,6 +1266,11 @@ body {
 
     .about-avatar-box {
         width: 30%;
+    }
+
+    .extra-skills-section {
+        width: 90%;
+        margin: 30px auto 0 auto;
     }
 
     .education-section {
