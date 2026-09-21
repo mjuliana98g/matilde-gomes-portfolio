@@ -307,9 +307,21 @@ body {
     letter-spacing: 1px;
 }
 
+.dark-green-box {
+    align-self: flex-start;
+    background-color: var(--medium-green);
+    color: var(--lime-green);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.45rem;
+    padding: 4px 8px;
+    border: 2px solid var(--dark-green);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
 .complementary-info {
     font-family: monospace;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--orange);
     font-weight: bold;
 }
@@ -354,17 +366,6 @@ body {
 
 /* --- SECTION EDUCAÇÃO --- */
 
-.education-section {
-    width: 100%;
-    max-width: 1100px;
-    margin: 30px auto 10px auto;
-    background-color: var(--light-pink);
-    border: 4px solid var(--dark-green);
-    box-shadow: 3px 3px 0px var(--shadow);
-    padding-bottom: 20px;
-    scroll-margin-top: 90px;
-}
-
 .education-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -373,49 +374,18 @@ body {
 }
 
 .education-card {
-    background-color: white;
-    border: 2px solid var(--dark-green);
-    padding: 20px 15px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 20px 15px;
     position: relative;
+    background-color: white;
+    border: 2px solid var(--dark-green);
 }
 
 .education-card-container {
     display: flex;
     justify-content: space-between;
-}
-
-.edu-tag-comp {
-    align-self: flex-start;
-    background-color: var(--medium-green);
-    color: var(--lime-green);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.45rem;
-    padding: 4px 8px;
-    border: 2px solid var(--dark-green);
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-
-.edu-tag-incomp {
-    align-self: flex-start;
-    background-color: var(--lime-green);
-    color: var(--medium-green);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.45rem;
-    padding: 4px 8px;
-    border: 2px solid var(--dark-green);
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-
-.edu-date {
-    font-family: monospace;
-    font-size: 0.9rem;
-    color: var(--orange);
-    font-weight: bold;
 }
 
 .education-card h3 {
@@ -431,7 +401,6 @@ body {
 .inst-container {
     display: flex;
     flex-direction: column;
-
 }
 
 .edu-institution {
@@ -442,15 +411,7 @@ body {
     text-align: justify;
 }
 
-.edu-institution-spec {
-    font-family: monospace;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: var(--orange);
-    text-align: justify;
-}
-
-.edu-desc {
+.description {
     margin-top: 15px;
     font-family: monospace;
     font-size: 0.8rem;
@@ -1137,12 +1098,6 @@ body {
     }
 
     /* Section Education */
-    .education-section {
-        width: 92%;
-        margin: 20px auto 0 auto;
-        scroll-margin-top: 140px;
-    }
-
     .education-container {
         grid-template-columns: 1fr;
         margin: 15px;
@@ -1283,7 +1238,7 @@ body {
         width: calc(100% - 40px);
         padding-bottom: 15px;
         margin: 120px auto 0 auto;
-        scroll-margin-top: 140px;
+        scroll-margin-top: 120px;
     }
 
     .about-container {
@@ -1306,9 +1261,10 @@ body {
         margin: 30px auto 0 auto;
     }
 
+    /* --- ALTERAÇÃO AQUI: 2 colunas em vez de coluna única --- */
     .education-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         margin: 15px;
         gap: 15px;
     }
