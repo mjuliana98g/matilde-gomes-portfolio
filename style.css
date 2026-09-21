@@ -1,4 +1,5 @@
 :root {
+    /* Colors */
     --dark-brown: #412815;
     --medium-brown: #5C3A21;
     --light-brown: #7a4e2d;
@@ -10,6 +11,14 @@
     --light-pink: #ebe3d5;
     --medium-pink: #ccbea6;
     --orange: #b85d38;
+
+    /* Fonts */
+    --font-pixel: 'Press Start 2P', monospace;
+    --font-mono: monospace;
+
+    /* Borders */
+    --border-pixel: 2px solid var(--dark-green);
+    --border-pixel-dotted: 2px dotted var(--dark-green);
 }
 
 * {
@@ -26,14 +35,13 @@ body {
 }
 
 /* --- HEADER --- */
-
 .site-header {
-    background-color: var(--medium-brown);
-    font-family: 'Press Start 2P', monospace;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    font-family: var(--font-pixel);
+    background-color: var(--medium-brown);
 }
 
 .header-container {
@@ -41,7 +49,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 6px 15px;
+    padding: 6px clamp(10px, 1.5vw, 15px);
     max-width: 1400px;
 }
 
@@ -49,10 +57,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 12px;
+    padding: 12px;
     color: white;
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .header-nav {
@@ -63,7 +72,7 @@ body {
 .nav-links-wrapper {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: clamp(10px, 1.5vw, 20px);
 }
 
 .nav-link {
@@ -72,11 +81,12 @@ body {
     justify-content: center;
     padding: 6px 10px;
     color: white;
-    font-size: 0.65rem;
+    font-size: clamp(0.5rem, 0.9vw, 0.65rem);
     text-decoration: none;
     background-color: var(--light-brown);
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -92,7 +102,7 @@ body {
 
 .dropdown-arrow {
     margin-left: 5px;
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
     line-height: 0;
     transform: translateY(-3px);
     transition: transform 0.6s ease;
@@ -128,7 +138,7 @@ body {
     align-items: center;
     padding: 8px 5px;
     color: white;
-    font-size: 0.55rem;
+    font-size: clamp(0.45rem, 0.8vw, 0.55rem);
     text-decoration: none;
     background-color: var(--light-green);
     transition: background-color 0.1s ease;
@@ -147,41 +157,36 @@ body {
     border: 0.5px solid var(--lime-green);
 }
 
-.header-lang {
+.header-languages {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4px;
     gap: 2px;
     background-color: var(--dark-brown);
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
 }
 
-.lang-btn-active {
-    padding: 6px 6px;
-    color: black;
-    font-family: 'Press Start 2P', monospace;
+.language-btn-active,
+.language-btn-inactive {
+    padding: 6px;
     font-size: 0.5rem;
     font-weight: bold;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.language-btn-active {
+    color: black;
     background-color: var(--lime-green);
     border: 1px solid var(--dark-brown);
-    cursor: pointer;
 }
 
-.lang-btn-inactive {
-    padding: 6px 6px;
+.language-btn-inactive {
     color: white;
-    font-size: 0.5rem;
-    font-weight: bold;
-    font-family: 'Press Start 2P', monospace;
-    text-decoration: none;
-    cursor: pointer;
 }
 
-.lang-btn-inactive:hover {
-    padding: 6px 6px;
-    color: white;
+.language-btn-inactive:hover {
     background-color: var(--light-brown);
 }
 
@@ -640,7 +645,7 @@ body {
 .card-tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     margin-top: 10px;
     gap: 8px;
 }
@@ -649,7 +654,7 @@ body {
     background-color: var(--light-pink);
     border: 1px solid var(--dark-green);
     font-family: monospace;
-    font-size: clamp(0.65rem, 1.2vw, 0.75rem); 
+    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
     padding: 4px 8px;
     color: black;
     font-weight: bold;
@@ -949,7 +954,7 @@ body {
         font-size: 0.7rem;
         text-decoration: none;
         background-color: var(--light-brown);
-        border: 2px solid var(--dark-green);
+        border: var(--border-pixel);
         transition: all 0.2s ease;
     }
 
@@ -986,6 +991,10 @@ body {
     .dropdown-menu {
         position: static;
         background-color: var(--medium-green);
+    }
+
+    .header-languages {
+        border: var(--border-pixel);
     }
 
     /* Section About Me */
@@ -1196,8 +1205,8 @@ body {
         font-size: clamp(0.7rem, 1.45vw, 1rem);
     }
 
-    .lang-btn-active,
-    .lang-btn-inactive {
+    .language-btn-active,
+    .language-btn-inactive {
         font-size: clamp(0.4rem, 0.73vw, 0.5rem);
     }
 
