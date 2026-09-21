@@ -285,6 +285,16 @@ body {
     font-weight: bold;
 }
 
+.title-complement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--lime-green);
+    font-family: var(--font-pixel);
+    font-size: clamp(0.45rem, 1.5vw, 0.6rem);
+    text-align: right;
+}
+
 /* --- SECTION ABOUT ME --- */
 
 .about-container {
@@ -611,16 +621,6 @@ body {
 
 /* --- SECTION EXPERIENCE --- */
 
-.title-complement {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    color: var(--lime-green);
-    font-family: var(--font-pixel);
-    font-size: clamp(0.45rem, 1.5vw, 0.6rem);
-    text-align: right;
-}
-
 .experience-container {
     display: flex;
     flex-direction: column;
@@ -804,17 +804,6 @@ body {
 
 /* --- PROJECTS SECTION --- */
 
-.projects-section {
-    width: 95%;
-    max-width: 1100px;
-    margin: 30px auto 10px auto;
-    background-color: var(--light-pink);
-    border: 4px solid var(--dark-green);
-    box-shadow: 3px 3px 0px var(--shadow);
-    padding-bottom: 30px;
-    scroll-margin-top: 90px;
-}
-
 .projects-category-wrapper {
     display: flex;
     flex-direction: column;
@@ -822,18 +811,13 @@ body {
     gap: 20px;
 }
 
-.section-title {
-    display: flex;
-    justify-content: space-between;
-}
-
 .project-category-title h3 {
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.55rem;
     color: var(--lime-green);
     background-color: var(--medium-green);
     padding: 6px 10px;
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
     letter-spacing: 1px;
 }
 
@@ -846,9 +830,11 @@ body {
 .project-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
     background-color: white;
-    border: 1.5px solid var(--dark-green);
+    border: 2px solid var(--dark-green);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .project-card-header {
@@ -859,29 +845,54 @@ body {
 }
 
 .project-title {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.60rem;
+    font-family: var(--font-pixel);
+    font-size: clamp(0.5rem, 1.4vw, 0.6rem);
     color: var(--dark-green);
     letter-spacing: 1px;
 }
 
-/* .card-tags {
+.project-info {
     display: flex;
-    justify-content: space-between;
-
-} */
-
-.card-web-tags {
-    display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.project-desc {
-    font-family: monospace;
-    font-size: 0.75rem;
-    line-height: 1.4;
+.card-tags-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.card-web-tags-projects {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.web-box {
+    background-color: var(--light-brown);
+    border: 2px solid var(--dark-green);
+    padding: 6px 12px;
+    color: white;
+    font-family: var(--font-pixel);
+    font-size: 0.40rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 2px 2px 0px var(--shadow);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.web-box:hover {
+    background-color: var(--lime-green);
     color: black;
-    text-align: justify;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px var(--dark-green);
 }
 
 /* --- FOOTER --- */
@@ -1019,10 +1030,7 @@ body {
         height: 180px;
     }
 
-
-
-
-    /* Section Extra Skills & Hobbies (Mobile) */
+    /* Section Extra Skills */
     .extra-skills-section {
         width: calc(100% - 20px);
         margin: 20px auto 20px auto;
@@ -1064,10 +1072,6 @@ body {
         padding: 10px;
     }
 
-
-
-
-
     /* Section Education */
 
     .education-container {
@@ -1100,19 +1104,10 @@ body {
     }
 
     /* Section Projects */
-    .projects-section {
-        width: calc(100% - 20px);
-        margin: 20px auto 0 auto;
-    }
 
-    .projects-category-wrapper {
-        margin: 15px;
-        gap: 15px;
-    }
-
-    .projects-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    #projects .section-title h2 {
+        font-size: clamp(0.35rem, 3.2vw, 0.45rem);
+        white-space: nowrap;
     }
 
     /* Footer */
@@ -1204,15 +1199,6 @@ body {
         width: 30%;
     }
 
-
-
-
-    .extra-skills-section {
-        width: 90%;
-        margin: 30px auto 30px auto;
-        /* Alterado de 0 para 20px em baixo */
-    }
-
     /* Section education  */
 
     .education-container {
@@ -1226,6 +1212,23 @@ body {
 
     .experience-container {
         margin: 15px;
+        gap: 15px;
+    }
+
+     /*  Section Projects */
+
+    .projects-section {
+        width: 90%;
+        margin: 30px auto 0 auto;
+    }
+
+    .projects-category-wrapper {
+        margin: 15px;
+        gap: 15px;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
