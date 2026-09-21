@@ -32,6 +32,7 @@ body {
     background-color: white;
     background-image: radial-gradient(circle, #2d3732 0.5px, transparent 0.5px);
     background-size: 15px 15px;
+    padding-top: clamp(70px, 10vw, 95px);
 }
 
 /* --- HEADER --- */
@@ -191,12 +192,13 @@ body {
 }
 
 /* Main */
-/* Section About Me  */
+
+/* --- Global components --- */
 
 .section-box {
     width: calc(100% - 40px);
     max-width: 1100px;
-    margin: 70px auto 10px auto;
+    margin: 0 auto 20px auto;
     padding-bottom: 20px;
     background-color: var(--light-pink);
     border: 4px solid var(--dark-green);
@@ -205,15 +207,51 @@ body {
 }
 
 .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 8px 12px;
     margin-bottom: 20px;
     color: white;
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.45rem;
     letter-spacing: 2px;
     background-color: var(--medium-brown);
-    border-bottom: 1px solid var(--dark-green);
+    border-bottom: var(--border-pixel);
 }
+
+.lime-green-box {
+    align-self: flex-start;
+    padding: 4px 8px;
+    color: var(--medium-green);
+    font-family: var(--font-pixel);
+    font-size: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: var(--lime-green);
+    border: var(--border-pixel);
+}
+
+.dark-green-box {
+    align-self: flex-start;
+    padding: 4px 8px;
+    color: var(--lime-green);
+    font-family: var(--font-pixel);
+    font-size: 0.45rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: var(--medium-green);
+    border: var(--border-pixel);
+}
+
+.complementary-info {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--orange);
+}
+
+/* --- SECTION ABOUT ME --- */
 
 .about-container {
     display: flex;
@@ -233,7 +271,7 @@ body {
     min-width: 200px;
     height: 260px;
     background-color: var(--medium-pink);
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
     flex-shrink: 0;
 }
 
@@ -244,16 +282,17 @@ body {
     overflow: hidden;
     width: 70%;
     height: 100%;
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
 }
 
-.about-me-image {
+.avatar-photo,
+.avatar-icon {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.avatar-witch {
+.avatar-icon {
     display: none;
 }
 
@@ -261,21 +300,21 @@ body {
     display: none;
 }
 
-.about-avatar-box:hover .avatar-witch {
+.about-avatar-box:hover .avatar-icon {
     display: block;
 }
 
-.profile-tag {
+.profile-photo-tag {
     position: absolute;
-    padding: 6px 5px;
     bottom: 6px;
+    padding: 6px 5px;
     color: white;
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     font-size: clamp(0.35rem, 1.5vw, 0.6rem);
-    white-space: nowrap;
     letter-spacing: 1px;
+    white-space: nowrap;
     background-color: var(--orange);
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
 }
 
 .about-content {
@@ -287,7 +326,7 @@ body {
 }
 
 .about-content h3 {
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     color: var(--dark-green);
     font-size: 1rem;
     letter-spacing: 0.5px;
@@ -295,51 +334,19 @@ body {
 
 .age-city-data {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    gap: 15px
+    gap: 15px;
 }
 
-.lime-green-box {
-    align-self: flex-start;
-    background-color: var(--lime-green);
-    color: var(--medium-green);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.5rem;
-    padding: 4px 8px;
-    border: 2px solid var(--dark-green);
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.dark-green-box {
-    align-self: flex-start;
-    background-color: var(--medium-green);
-    color: var(--lime-green);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.45rem;
-    padding: 4px 8px;
-    border: 2px solid var(--dark-green);
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-
-.complementary-info {
-    font-family: monospace;
-    font-size: 0.8rem;
-    color: var(--orange);
-    font-weight: bold;
-}
-
-.about-bio-box {
+.bio-box {
     padding: 15px;
     color: black;
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-size: 0.85rem;
     line-height: 1.5;
     text-align: justify;
     background-color: white;
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
 }
 
 .about-links {
@@ -347,23 +354,23 @@ body {
     gap: 10px;
 }
 
-.about-links .pixel-btn {
+.social-media-btn {
     flex: 1;
     padding: 10px;
     color: black;
     text-align: center;
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.55rem;
+    font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
-    font-weight: bold;
     background-color: var(--medium-pink);
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
     box-shadow: 3px 3px 0px var(--shadow);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-.about-links .pixel-btn:hover {
+.social-media-btn:hover {
     background-color: var(--lime-green);
     box-shadow: 4px 4px 0px var(--dark-green);
     transform: translate(-1px, -1px);
@@ -999,10 +1006,8 @@ body {
 
     /* Section About Me */
     .section-box {
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
         padding-bottom: 15px;
-        margin: 130px auto 10px auto;
-        scroll-margin-top: 140px;
     }
 
     .about-container {
@@ -1013,30 +1018,18 @@ body {
     }
 
     .about-avatar-box {
-        width: 100%;
-        max-width: 200px;
-        height: 220px;
+        width: 70%;
+        min-width: 180px;
+        height: 180px;
     }
 
-    .section-title {
-        text-align: center;
-        font-size: 0.6rem;
-    }
 
-    .profile-tag {
-        font-size: clamp(0.35rem, 3vw, 0.55rem);
-        white-space: nowrap;
-    }
 
-    .about-links {
-        flex-direction: column;
-    }
 
     /* Section Extra Skills & Hobbies (Mobile) */
     .extra-skills-section {
         width: calc(100% - 20px);
         margin: 20px auto 0 auto;
-        scroll-margin-top: 140px;
     }
 
     .skills-grid-box {
@@ -1081,61 +1074,6 @@ body {
         gap: 15px;
     }
 
-    /* Section Experience */
-    /*    .experience-section {
-        width: calc(100% - 20px);
-        margin: 20px auto 0 auto;
-        scroll-margin-top: 140px;
-    }
-
-    .experience-container {
-        margin: 15px;
-        gap: 15px;
-    }
-
-    .experience-section .section-title {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .experience-card-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .experience-card-meta {
-        align-items: flex-start;
-        width: 100%;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .scientific-articles-section {
-        margin: 0;
-    }
-
-    .article-images-row {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 100%;
-    }
-
-    .article-image-box {
-        height: 180px;
-    }
-
-    .article-title-row {
-        max-width: 100%;
-        padding: 0 5px;
-    }
-
-    .article-title {
-        font-size: 0.75rem;
-    } */
-
     /* Footer */
     .site-footer {
         margin-top: 30px;
@@ -1160,7 +1098,6 @@ body {
     .projects-section {
         width: calc(100% - 20px);
         margin: 20px auto 0 auto;
-        scroll-margin-top: 140px;
     }
 
     .projects-category-wrapper {
@@ -1176,7 +1113,7 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
-    /* Header  */
+    /* Header (Tablet) */
     .header-container {
         padding: 6px clamp(8px, 1.4vw, 15px);
     }
@@ -1210,12 +1147,10 @@ body {
         font-size: clamp(0.4rem, 0.73vw, 0.5rem);
     }
 
-    /* Section About Me */
+    /* Section About Me (Tablet) */
     .section-box {
         width: calc(100% - 40px);
         padding-bottom: 15px;
-        margin: 120px auto 0 auto;
-        scroll-margin-top: 120px;
     }
 
     .about-container {
@@ -1228,12 +1163,10 @@ body {
         width: 30%;
     }
 
-    .extra-skills-section {
-        width: 90%;
-        margin: 30px auto 0 auto;
-    }
 
-    .education-section {
+    
+
+    .extra-skills-section {
         width: 90%;
         margin: 30px auto 0 auto;
     }
@@ -1245,33 +1178,6 @@ body {
         gap: 15px;
     }
 
-    /* Section Experience */
-    /* .experience-section {
-        width: 90%;
-        margin: 30px auto 0 auto;
-    }
-
-    .experience-container {
-        margin: 15px;
-    }
-
-    .experience-card-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .experience-card-meta {
-        align-items: flex-start;
-        width: 100%;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .scientific-articles-section {
-        margin: 0;
-    }
- */
     /* Footer */
     .site-footer {
         margin-top: 35px;
