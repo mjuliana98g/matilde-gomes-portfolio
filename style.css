@@ -267,6 +267,24 @@ body {
     text-align: justify;
 }
 
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.grey-box {
+    background-color: var(--light-pink);
+    border: 1px solid var(--dark-green);
+    font-family: var(--font-mono);
+    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+    padding: 4px 8px;
+    color: black;
+    font-weight: bold;
+}
+
 /* --- SECTION ABOUT ME --- */
 
 .about-container {
@@ -591,13 +609,14 @@ body {
     gap: 4px;
 }
 
-/*SECTION EXPERIENCE*/
+/* --- SECTION EXPERIENCE --- */
+
 .title-complement {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     color: var(--lime-green);
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     font-size: clamp(0.45rem, 1.5vw, 0.6rem);
     text-align: right;
 }
@@ -615,11 +634,11 @@ body {
     flex-direction: column;
     padding: 15px;
     background-color: white;
-    border: 2px solid var(--dark-green);
+    border: var(--border-pixel);
 }
 
 .experience-card-side-quest {
-    border: 2px dotted var(--dark-green);
+    border: var(--border-pixel-dotted);
 }
 
 .experience-card-top {
@@ -631,7 +650,7 @@ body {
 .experience-card h3,
 .experience-card-side-quest h3 {
     color: var(--dark-green);
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     font-size: clamp(0.5rem, 1.6vw, 0.8rem);
     line-height: 1.3;
     letter-spacing: 1px;
@@ -642,30 +661,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
     gap: 5px;
-}
-
-.institution-container {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 10px;
-    gap: 8px;
-}
-
-.grey-box {
-    background-color: var(--light-pink);
-    border: 1px solid var(--dark-green);
-    font-family: monospace;
-    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
-    padding: 4px 8px;
-    color: black;
-    font-weight: bold;
 }
 
 /* --- Scientific Reports Section --- */
@@ -1081,6 +1076,45 @@ body {
         gap: 15px;
     }
 
+    /* Section Experience*/
+    .experience-container {
+        margin: 15px;
+        gap: 15px;
+    }
+
+    .experience-card-meta .dark-green-box {
+        display:none;
+    }
+
+    .experience-card-meta .complementary-info {
+        white-space: nowrap;
+        margin-bottom: 20px;
+    }
+
+    .article-images-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article-image-box {
+        height: 180px;
+    }
+
+    /* Section Projects */
+    .projects-section {
+        width: calc(100% - 20px);
+        margin: 20px auto 0 auto;
+    }
+
+    .projects-category-wrapper {
+        margin: 15px;
+        gap: 15px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
     /* Footer */
     .site-footer {
         margin-top: 30px;
@@ -1184,6 +1218,13 @@ body {
     .education-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin: 15px;
+        gap: 15px;
+    }
+
+   /*  Section Experience */
+
+    .experience-container {
         margin: 15px;
         gap: 15px;
     }
