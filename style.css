@@ -851,28 +851,23 @@ body {
 /* --- FOOTER --- */
 
 .site-footer {
-    background-color: var(--medium-brown);
-    border-top: 1px solid var(--dark-green);
     width: 100%;
     margin-top: 40px;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 30px 20px;
     gap: 20px;
+    background-color: var(--medium-brown);
+    border-top: 1px solid var(--dark-green);
 }
 
 .save-title {
     background-color: var(--medium-green);
     border: 2px solid var(--light-brown);
     color: var(--lime-green);
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.50rem;
     padding: 10px 16px;
     letter-spacing: 1px;
@@ -880,7 +875,7 @@ body {
 }
 
 .footer-copy {
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-size: 0.85rem;
     color: white;
     text-align: center;
@@ -1080,33 +1075,7 @@ body {
 
     /* Section Projects */
 
-    #projects .section-title h2 {
-        font-size: clamp(0.35rem, 3.2vw, 0.45rem);
-        white-space: nowrap;
-    }
-
-    /* Footer */
-    .site-footer {
-        margin-top: 30px;
-    }
-
-    .footer-container {
-        padding: 20px 10px;
-        gap: 15px;
-    }
-
-    .save-title {
-        font-size: 0.45rem;
-        padding: 8px 12px;
-    }
-
-    .footer-copy {
-        font-size: 0.75rem;
-        padding: 0 10px;
-    }
-
-    /* Section Projects */
-    .projects-section {
+        .projects-section {
         width: calc(100% - 20px);
         margin: 20px auto 0 auto;
     }
@@ -1119,6 +1088,29 @@ body {
     .projects-container {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+
+    #projects .section-title h2 {
+        font-size: clamp(0.35rem, 3.2vw, 0.45rem);
+        white-space: nowrap;
+    }
+
+    /* Footer */
+
+    .site-footer {
+        margin-top: 30px;
+        padding: 20px 10px;
+        gap: 15px;
+    }
+
+    .save-title {
+        font-size: 0.45rem;
+        padding: 8px 12px;
+    }
+
+    .footer-copy {
+        font-size: 0.75rem;
+        padding: 0 10px;
     }
 }
 
@@ -1235,13 +1227,9 @@ body {
     }
 
     /* Footer */
-
+    
     .site-footer {
         margin-top: 35px;
-    }
-
-    .footer-container {
-        max-width: 90%;
         padding: 25px 15px;
     }
 }
