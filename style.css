@@ -420,47 +420,46 @@ body {
     transform: translate(-1px, -1px);
 }
 
-/* SKILLS SECTION */
+/* --- SECTION SKILLS --- */
 
-.extra-skills-section {
-    width: 95%;
+.skills-section {
+    width: calc(100% - 40px);
     max-width: 1000px;
-    margin: 50px auto 50px auto;
+    margin: 40px auto 40px auto;
+    padding-bottom: 20px;
     background-color: var(--light-pink);
     border: 4px solid var(--dark-green);
     box-shadow: 3px 3px 0px var(--shadow);
     scroll-margin-top: 90px;
 }
 
-.extra-skills-section input[type="radio"] {
+.skills-section input[type="radio"] {
     display: none;
 }
 
-.skills-slide {
+.skills-carousel-wrapper>div {
     display: none;
     flex-direction: column;
     gap: 20px;
 }
 
-#slide-hard:checked~.skills-carousel-wrapper .pane-hard,
-#slide-soft:checked~.skills-carousel-wrapper .pane-soft,
-#slide-hobbies:checked~.skills-carousel-wrapper .pane-hobbies {
+#slide-hard-skills:checked~.skills-carousel-wrapper .hard-skills,
+#slide-soft-skills:checked~.skills-carousel-wrapper .soft-skills,
+#slide-hobbies:checked~.skills-carousel-wrapper .hobbies {
     display: flex;
 }
 
-.pane-header {
+.skills-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--medium-green);
-    padding: 8px 8px;
-}
-
-.pane-header h3 {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.55rem;
+    padding: 8px 12px;
     color: var(--lime-green);
-    letter-spacing: 1px;
+    font-family: var(--font-pixel);
+    font-size: 0.45rem;
+    letter-spacing: 2px;
+    background-color: var(--dark-green);
+    border-bottom: var(--border-pixel);
 }
 
 .skills-grid-box {
@@ -506,7 +505,7 @@ body {
 }
 
 .skill-name {
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-size: 0.80rem;
     font-weight: bold;
     color: var(--dark-brown);
@@ -523,7 +522,7 @@ body {
 }
 
 .suggestion-label {
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-size: 0.85rem;
     font-weight: bold;
     color: var(--dark-green);
@@ -539,29 +538,9 @@ body {
     background-color: white;
     border: 2px solid var(--dark-green);
     padding: 8px;
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-size: 0.8rem;
     color: gray;
-}
-
-.suggestion-submit-btn {
-    background-color: var(--light-brown);
-    border: 2px solid var(--dark-green);
-    padding: 8px 14px;
-    color: white;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.40rem;
-    letter-spacing: 1px;
-    text-decoration: none;
-    box-shadow: 2px 2px 0px var(--shadow);
-    transition: transform 0.1s ease, background-color 0.1s ease;
-}
-
-.suggestion-submit-btn:hover {
-    background-color: var(--lime-green);
-    color: black;
-    transform: translate(-1px, -1px);
-    box-shadow: 3px 3px 0px var(--dark-green);
 }
 
 .slide-arrow {
@@ -1030,16 +1009,19 @@ body {
         height: 180px;
     }
 
-    /* Section Extra Skills */
-    .extra-skills-section {
-        width: calc(100% - 20px);
-        margin: 20px auto 20px auto;
-        /* Alterado de 0 para 20px em baixo */
+    /* Section Skills */
+    .skills-section {
+        width: calc(100% - 50px);
     }
 
     .skills-grid-box {
-        gap: 15px 10px;
-        padding: 10px 5px;
+        justify-content: center;
+        gap: 18px 14px;
+        padding: 10px 10px;
+    }
+
+    .skill-item-wrapper {
+        width: 74px;
     }
 
     .skill-card-item {
@@ -1054,7 +1036,10 @@ body {
     }
 
     .skill-name {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        line-height: 1.25;
+        word-break: break-word;
+        hyphens: auto;
     }
 
     .suggestion-form-box {
@@ -1066,10 +1051,8 @@ body {
         gap: 8px;
     }
 
-    .suggestion-submit-btn {
+    .suggestion-form-box .web-box {
         width: 100%;
-        text-align: center;
-        padding: 10px;
     }
 
     /* Section Education */
@@ -1087,7 +1070,7 @@ body {
     }
 
     .experience-card-meta .dark-green-box {
-        display:none;
+        display: none;
     }
 
     .experience-card-meta .complementary-info {
@@ -1199,6 +1182,22 @@ body {
         width: 30%;
     }
 
+    /* Section Skills */
+    .skills-grid-box {
+        justify-content: center;
+        gap: 20px 24px;
+    }
+
+    .skill-item-wrapper {
+        width: 90px;
+    }
+
+    .skill-name {
+        line-height: 1.25;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
     /* Section education  */
 
     .education-container {
@@ -1208,14 +1207,14 @@ body {
         gap: 15px;
     }
 
-   /*  Section Experience */
+    /*  Section Experience */
 
     .experience-container {
         margin: 15px;
         gap: 15px;
     }
 
-     /*  Section Projects */
+    /*  Section Projects */
 
     .projects-section {
         width: 90%;
