@@ -18,24 +18,24 @@
             <!-- Navigation Menu  -->
             <nav class="header-nav">
                 <!-- Mobile Menu -->
-                <a href="#mobile-menu" class="menu-btn">MENU ☰</a>
-                <div id="mobile-menu" class="nav-links-wrapper">
+                <a href="#menu" class="menu-btn-mobile">MENU ☰</a>
+                <div id="menu" class="nav-links-wrapper">
                     <a href="#" class="nav-link">Sobre Mim</a>
                     <a href="#education" class="nav-link">Educação</a>
                     <a href="#experience" class="nav-link">Experiência</a>
-                    <!-- Projects Dropdown Menu -->
-                    <div class="nav-dropdown">
-                        <a href="#projects" class="nav-link">Projetos<span class="dropdown-arrow">▾</span>
-                        </a>
+                    <details class="nav-dropdown">
+                        <summary class="nav-link">Projetos</summary>
                         <div class="dropdown-menu">
                             <a href="#in-progress" class="dropdown-item">
-                                <span>Em Curso</span> <span class="item-counter">1</span>
+                                <span>Em Curso</span>
+                                <span class="item-counter">1</span>
                             </a>
                             <a href="#completed" class="dropdown-item">
-                                <span>Terminados</span> <span class="item-counter">0</span>
+                                <span>Terminados</span>
+                                <span class="item-counter">0</span>
                             </a>
                         </div>
-                    </div>
+                    </details>
                 </div>
             </nav>
             <!-- Languages -->
@@ -48,9 +48,7 @@
     <main>
         <!-- SECTION ABOUT ME -->
         <section id="about-me" class="section-box">
-            <div class="section-title">
-                <h2>SOBRE MIM</h2>
-            </div>
+            <h2 class="section-title">SOBRE MIM</h2>
             <div class="about-container">
                 <div class="about-avatar-box">
                     <div class="avatar-placeholder">
@@ -73,10 +71,11 @@
                     <!-- Social Media -->
                     <div class="about-links">
                         <a href="https://www.linkedin.com/in/matildegomes98/?locale=pt" target="_blank"
-                            class="social-media-btn">LinkedIn</a>
-                        <a href="https://github.com/mjuliana98g" target="_blank" class="social-media-btn">GitHub</a>
+                            rel="noopener noreferrer" class="social-media-btn">LinkedIn</a>
+                        <a href="https://github.com/mjuliana98g" target="_blank" rel="noopener noreferrer"
+                            class="social-media-btn">GitHub</a>
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=m.juliana.98.g@gmail.com&&su=Contacto%20via%20Portfólio"
-                            target="_blank" class="social-media-btn">Email</a>
+                            target="_blank" rel="noopener noreferrer" class="social-media-btn">Email</a>
                     </div>
                 </div>
             </div>
@@ -95,46 +94,26 @@
                         <label for="slide-soft-skills" class="slide-arrow" title="next">▶</label>
                     </div>
                     <div class="skills-grid-box">
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box">
-                                    <img src="HardSkills1.png" alt="Icon HTML CSS hard skill" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">HTML & CSS</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box">
-                                    <img src="HardSkills2.png" alt="Icon JavaScript hard skill" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">JavaScript</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box">
-                                    <img src="HardSkills3.png" alt="Icon ServiceNow hard skill" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">ServiceNow</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box">
-                                    <img src="HardSkills4.png" alt="Icon RStudio hard skill" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Linguagem R</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box">
-                                    <img src="HardSkills5.png" alt="Icon Data Analysis hard skill" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Análise de Dados</span>
-                        </div>
+                        <figure class="skill-item">
+                            <img src="HardSkills1.png" alt="Ícone de HTML e CSS" class="skill-img">
+                            <figcaption class="skill-name">HTML & CSS</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="HardSkills2.png" alt="Ícone de JavaScript" class="skill-img">
+                            <figcaption class="skill-name">JavaScript</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="HardSkills3.png" alt="Ícone de ServiceNow" class="skill-img">
+                            <figcaption class="skill-name">ServiceNow</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="HardSkills4.png" alt="Ícone da linguagem R" class="skill-img">
+                            <figcaption class="skill-name">Linguagem R</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="HardSkills5.png" alt="Ícone de análise de dados" class="skill-img">
+                            <figcaption class="skill-name">Análise de Dados</figcaption>
+                        </figure>
                     </div>
                 </div>
                 <!-- soft skills -->
@@ -145,54 +124,30 @@
                         <label for="slide-hobbies" class="slide-arrow" title="next">▶</label>
                     </div>
                     <div class="skills-grid-box">
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box">
-                                    <img src="SoftSkill1.png" alt="Icon problem solving skill" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Resolução de Problemas</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="SoftSkill2.png" alt="Icon comunication soft skill"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Comunicação</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="SoftSkill3.png" alt="Icon team work soft skills"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Trabalho em Equipa</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="SoftSkills4.png"
-                                        alt="Icon adaptability soft skills" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Adaptabilidade</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="SoftSkills5.png"
-                                        alt="Icon time management soft skills" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Gestão de Tempo</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="SoftSkills6.png"
-                                        alt="Icon critical thinking soft skills" class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Pensamento Crítico</span>
-                        </div>
+                        <figure class="skill-item">
+                            <img src="SoftSkill1.png" alt="Ícone de resolução de problemas" class="skill-img">
+                            <figcaption class="skill-name">Resolução de Problemas</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="SoftSkill2.png" alt="Ícone de comunicação" class="skill-img">
+                            <figcaption class="skill-name">Comunicação</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="SoftSkill3.png" alt="Ícone de trabalho em equipa" class="skill-img">
+                            <figcaption class="skill-name">Trabalho em Equipa</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="SoftSkills4.png" alt="Ícone de adaptabilidade" class="skill-img">
+                            <figcaption class="skill-name">Adaptabilidade</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="SoftSkills5.png" alt="Ícone de gestão de tempo" class="skill-img">
+                            <figcaption class="skill-name">Gestão de Tempo</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="SoftSkills6.png" alt="Ícone de pensamento crítico" class="skill-img">
+                            <figcaption class="skill-name">Pensamento Crítico</figcaption>
+                        </figure>
                     </div>
                 </div>
                 <!-- hobbies -->
@@ -203,61 +158,37 @@
                         <label for="slide-hard-skills" class="slide-arrow" title="next">▶</label>
                     </div>
                     <div class="skills-grid-box">
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="Hobbie1.png" alt="Icon books hobbie"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Livros</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="Hobbie2.png" alt="Icon movies hobbie"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Filmes</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="Hobbie3.png" alt="Icon series hobbie"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Séries</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="Hobbie4.png" alt="Icon hiking hobbie"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Trilhos</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="Hobbie5.png" alt="Icon journaling hobbie"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Journaling</span>
-                        </div>
-                        <div class="skill-item-wrapper">
-                            <div class="skill-card-item">
-                                <div class="skill-icon-box"><img src="Hobbie6.png" alt="Icon friends hobbie"
-                                        class="skill-img">
-                                </div>
-                            </div>
-                            <span class="skill-name">Conviver</span>
-                        </div>
+                        <figure class="skill-item">
+                            <img src="Hobbie1.png" alt="Ícone de livros" class="skill-img">
+                            <figcaption class="skill-name">Livros</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="Hobbie2.png" alt="Ícone de filmes" class="skill-img">
+                            <figcaption class="skill-name">Filmes</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="Hobbie3.png" alt="Ícone de séries" class="skill-img">
+                            <figcaption class="skill-name">Séries</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="Hobbie4.png" alt="Ícone de trilhos" class="skill-img">
+                            <figcaption class="skill-name">Trilhos</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="Hobbie5.png" alt="Ícone de journaling" class="skill-img">
+                            <figcaption class="skill-name">Journaling</figcaption>
+                        </figure>
+                        <figure class="skill-item">
+                            <img src="Hobbie6.png" alt="Ícone de convívio com amigos" class="skill-img">
+                            <figcaption class="skill-name">Conviver</figcaption>
+                        </figure>
                     </div>
-                    <!-- Sugestions -->
+                    <!-- Sugestões -->
                     <div class="suggestion-form-box">
-                        <p class="suggestion-label">Deixa a tua recomendação:</p>
+                        <label for="suggestion-input" class="suggestion-label">Deixa a tua recomendação:</label>
                         <div class="suggestion-input-row">
-                            <input type="text" placeholder="Escreve aqui um livro, filme, trilho, ..."
-                                class="suggestion-text-input" disabled>
+                            <input type="text" id="suggestion-input"
+                                placeholder="Escreve aqui um livro, filme, série, ..." class="suggestion-text-input">
                             <button type="button" class="web-box">Enviar</button>
                         </div>
                     </div>
@@ -266,68 +197,55 @@
         </section>
         <!-- SECTION EDUCATION -->
         <section class="section-box" id="education">
-            <div class="section-title">
-                <h2>EDUCAÇÃO</h2>
-            </div>
+            <h2 class="section-title">EDUCAÇÃO</h2>
             <div class="education-container">
                 <!-- Card 1 -->
-                <div class="education-card">
+                <article class="education-card">
                     <div class="education-card-container">
                         <span class="lime-green-box">MISSÃO ATUAL</span>
                         <span class="complementary-info">2026 ...</span>
                     </div>
                     <h3>Curso ServiceNow</h3>
-                    <div class="institution-container">
-                        <p class="institution">Universidade Politécnica do Cávado e do Ave</p>
-                        <p class="complementary-info">IEFP/Deloitte</p>
-                    </div>
+                    <p class="institution">Universidade Politécnica do Cávado e do Ave</p>
+                    <p class="complementary-info">IEFP/Deloitte</p>
                     <p class="description">Exploração e domínio do ecossistema de computação em nuvem e gestão de
-                        serviços
-                        da ServiceNow. Através do Programa UpSkill - Digital Skills & Jobs.</p>
-                </div>
+                        serviços da ServiceNow. Através do Programa UpSkill - Digital Skills & Jobs.</p>
+                </article>
                 <!-- Card 2 -->
-                <div class="education-card">
+                <article class="education-card">
                     <div class="education-card-container">
                         <span class="dark-green-box">CONCLUÍDO</span>
                         <span class="complementary-info">2020-2023</span>
                     </div>
                     <h3>Mestrado Ecologia Marinha</h3>
-                    <div class="institution-container">
-                        <p class="institution">Faculdade de Ciências</p>
-                        <p class="complementary-info">Universidade de Lisboa</p>
-                    </div>
+                    <p class="institution">Faculdade de Ciências</p>
+                    <p class="complementary-info">Universidade de Lisboa</p>
                     <p class="description">Aprofundamento avançado da biodiversidade marinha, funcionamento dos habitats
                         e conservação ambiental.</p>
-                </div>
+                </article>
                 <!-- Card 3 -->
-                <div class="education-card">
+                <article class="education-card">
                     <div class="education-card-container">
                         <span class="dark-green-box">CONCLUÍDO</span>
                         <span class="complementary-info">2016-2019</span>
                     </div>
                     <h3>Licenciatura Ciências do Meio Aquático</h3>
-                    <div class="institution-container">
-                        <p class="institution">Instituto de Ciências Biomédicas Abel Salazar</p>
-                        <p class="complementary-info">Universidade do Porto</p>
-                    </div>
+                    <p class="institution">Instituto de Ciências Biomédicas Abel Salazar</p>
+                    <p class="complementary-info">Universidade do Porto</p>
                     <p class="description">Abordagem multidisciplinar aos ecossistemas marinhos, estuarinos e
-                        dulçaquícolas, focada na dinâmica biológica e na gestão de recursos hídricos.
-                    </p>
-                </div>
+                        dulçaquícolas, focada na dinâmica biológica e na gestão de recursos hídricos.</p>
+                </article>
             </div>
         </section>
         <!-- SECTION EXPERIENCE -->
         <section class="section-box" id="experience">
             <div class="section-title">
                 <h2>EXPERIÊNCIA</h2>
-                <div class="title-complement">
-                    <span>TOTAL: 2 Missões</span>
-                    <span>3 Extras</span>
-                </div>
+                <span class="title-complement">TOTAL: 2 Missões | 3 Extras</span>
             </div>
             <div class="experience-container">
                 <!-- Card 1 -->
-                <div class="experience-card">
+                <article class="experience-card">
                     <div class="experience-card-top">
                         <h3>MISSÃO: Colaboradora de Ourivesaria</h3>
                         <div class="experience-card-meta">
@@ -335,10 +253,8 @@
                             <span class="complementary-info">2023-2026</span>
                         </div>
                     </div>
-                    <div class="institution-container">
-                        <p class="institution">Teoria Preciosa - Jóias Lda</p>
-                        <p class="complementary-info">Braga</p>
-                    </div>
+                    <p class="institution">Teoria Preciosa - Jóias Lda</p>
+                    <p class="complementary-info">Braga</p>
                     <p class="description">Responsável pelo atendimento ao cliente, controlo de encomendas e
                         operações administrativas de loja,
                         garantindo rigor e qualidade no serviço.</p>
@@ -346,9 +262,9 @@
                         <span class="grey-box">Atendimento ao Público</span>
                         <span class="grey-box">Gestão de Stocks</span>
                     </div>
-                </div>
+                </article>
                 <!-- Card 2 -->
-                <div class="experience-card">
+                <article class="experience-card">
                     <div class="experience-card-top">
                         <h3>MISSÃO: Investigadora Científica Júnior</h3>
                         <div class="experience-card-meta">
@@ -356,11 +272,9 @@
                             <span class="complementary-info">2021-2023</span>
                         </div>
                     </div>
-                    <div class="institution-container">
-                        <p class="institution">Projeto <strong>TRANSFISH</strong> - Aclimatação transgeracional de
-                            peixes temperados às alterações climáticas</p>
-                        <p class="complementary-info">MARE - Centro de Ciências do Mar e do Ambiente | Lisboa</p>
-                    </div>
+                    <p class="institution">Projeto <strong>TRANSFISH</strong> - Aclimatação transgeracional de
+                        peixes temperados às alterações climáticas</p>
+                    <p class="complementary-info">MARE - Centro de Ciências do Mar e do Ambiente | Lisboa</p>
                     <p class="description">Condução de investigação experimental, incluindo a realização de
                         testes comportamentais, gestão e análise de dados científicos
                         e redação de relatórios técnicos.</p>
@@ -370,7 +284,7 @@
                         <span class="grey-box">R (RStudio)</span>
                         <span class="grey-box">Comunicação científica</span>
                     </div>
-                </div>
+                </article>
                 <!-- scientific reports -->
                 <div class="reports-section">
                     <h3 class="reports-title">ARTIGOS CIENTÍFICOS</h3>
@@ -378,40 +292,47 @@
                     <input type="radio" name="report-slider" id="report-1" checked>
                     <input type="radio" name="report-slider" id="report-2">
                     <div class="reports-carousel-container">
-                        <div class="report-images-row">
-                            <video src="VID_seahorse.mp4" autoplay muted loop playsinline class="report-video"></video>
-                            <img src="seahorse.jpg" alt="Scientific report seahorse image" class="report-img">
-                            <img src="seahorse3.jpg" alt="Scientific report lab image" class="report-img">
-                            <img src="seahorse4.jpg" alt="Scientific report lab image 2" class="report-img">
-                        </div>
+                        <figure class="report-images-row">
+                            <video src="VID_seahorse.mp4" autoplay muted loop playsinline class="report-video">
+                                O seu navegador não suporta a reprodução deste vídeo.
+                            </video>
+                            <img src="seahorse.jpg"
+                                alt="Cavalo-marinho fotografado em contexto de investigação científica"
+                                class="report-img">
+                            <img src="seahorse3.jpg" alt="Registo fotográfico de laboratório" class="report-img">
+                            <img src="seahorse4.jpg" alt="Registo fotográfico de laboratório, ensaio 2"
+                                class="report-img">
+                            <figcaption class="sr-only"></figcaption>
+                        </figure>
                         <div class="report-slide">
                             <div class="report-title-row">
                                 <label for="report-2" class="report-arrow" title="previous">◀</label>
-                                <h5 class="report-title">"Impacts of acute hypoxia on the short-snouted seahorse
-                                    metabolism and behaviour"</h5>
+                                <h4 class="report-title">"Impacts of acute hypoxia on the short-snouted seahorse
+                                    metabolism and behaviour"</h4>
                                 <label for="report-2" class="report-arrow" title="next">▶</label>
                             </div>
                             <a href="https://www.sciencedirect.com/science/article/pii/S0048969723055183?via%3Dihub"
-                                target="_blank" class="web-box">
+                                target="_blank" rel="noopener noreferrer" class="web-box">
                                 <span>Artigo Completo Aqui!</span>
                             </a>
                         </div>
                         <div class="report-slide">
                             <div class="report-title-row">
                                 <label for="report-1" class="report-arrow" title="previous">◀</label>
-                                <h5 class="report-title">"Physiological and behavioral responses of seahorse newborns
-                                    to acute hypoxia"</h5>
+                                <h4 class="report-title">"Physiological and behavioral responses of seahorse
+                                    newborns
+                                    to acute hypoxia"</h4>
                                 <label for="report-1" class="report-arrow" title="next">▶</label>
                             </div>
                             <a href="https://www.sciencedirect.com/science/article/abs/pii/S0141113625004015"
-                                target="_blank" class="web-box">
+                                target="_blank" rel="noopener noreferrer" class="web-box">
                                 <span>Artigo Completo Aqui!</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="experience-card-side-quest">
+                <article class="experience-card-side-quest">
                     <div class="experience-card-top">
                         <h3>EXTRA: Monitora de Projetos Educativos</h3>
                         <div class="experience-card-meta">
@@ -419,16 +340,14 @@
                             <span class="complementary-info">2022</span>
                         </div>
                     </div>
-                    <div class="institution-container">
-                        <p class="institution">Projetos de Verão: Mar Vivo</p>
-                        <p class="complementary-info">Universidade Júnior: Universidade do Porto | Porto</p>
-                    </div>
+                    <p class="institution">Projetos de Verão: Mar Vivo</p>
+                    <p class="complementary-info">Universidade Júnior: Universidade do Porto | Porto</p>
                     <div class="card-tags">
                         <span class="grey-box">Educação Ambiental</span>
                     </div>
-                </div>
+                </article>
                 <!-- Card 4 -->
-                <div class="experience-card-side-quest">
+                <article class="experience-card-side-quest">
                     <div class="experience-card-top">
                         <h3>EXTRA: Investigadora Científica Estagiária</h3>
                         <div class="experience-card-meta">
@@ -436,20 +355,18 @@
                             <span class="complementary-info">2019</span>
                         </div>
                     </div>
-                    <div class="institution-container">
-                        <p class="institution">Projeto: Estado de conservação do mexilhão-de-rio <i>Margaritifera
-                                margaritifera</i> no Rio Paiva</p>
-                        <p class="complementary-info">Universidade do Minho | Braga</p>
-                    </div>
+                    <p class="institution">Projeto: Estado de conservação do mexilhão-de-rio <i>Margaritifera
+                            margaritifera</i> no Rio Paiva</p>
+                    <p class="complementary-info">Universidade do Minho | Braga</p>
                     <div class="card-tags">
                         <span class="grey-box">Ecologia Aquática</span>
                         <span class="grey-box">R (RStudio)</span>
                         <span class="grey-box">SPSS</span>
                         <span class="grey-box">arcGIS</span>
                     </div>
-                </div>
+                </article>
                 <!-- Card 5 -->
-                <div class="experience-card-side-quest">
+                <article class="experience-card-side-quest">
                     <div class="experience-card-top">
                         <h3>EXTRA: Investigadora Científica Estagiária</h3>
                         <div class="experience-card-meta">
@@ -457,25 +374,21 @@
                             <span class="complementary-info">2018</span>
                         </div>
                     </div>
-                    <div class="institution-container">
-                        <p class="institution">Projeto <strong>INSEAFOOD</strong> - Inovação e valorização de
-                            produtos do mar: desafios e oportunidades locais</p>
-                        <p class="complementary-info">CIIMAR - Centro Interdisciplinar de Investigação Marinha e
-                            Ambiental | Porto</p>
-                    </div>
+                    <p class="institution">Projeto <strong>INSEAFOOD</strong> - Inovação e valorização de
+                        produtos do mar: desafios e oportunidades locais</p>
+                    <p class="complementary-info">CIIMAR - Centro Interdisciplinar de Investigação Marinha e
+                        Ambiental | Porto</p>
                     <div class="card-tags">
                         <span class="grey-box">Manutenção Aquários</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
         <!-- PROJECTS SECTION -->
         <section class="section-box" id="projects">
             <div class="section-title">
                 <h2>INVENTÁRIO DE PROJETOS</h2>
-                <div class="title-complement">
-                    <span>TOTAL:1 Conquista</span>
-                </div>
+                <span class="title-complement">TOTAL:1 Conquista</span>
             </div>
             <div class="projects-category-wrapper">
                 <!-- in progress -->
@@ -484,7 +397,7 @@
                 </div>
                 <div class="projects-container">
                     <!-- SLOT 1-->
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-card-header">
                             <h4 class="project-title">WEB PORTFOLIO RETRO</h4>
                             <span class="complementary-info">2026</span>
@@ -500,26 +413,26 @@
                                 </div>
                                 <div class="card-web-tags-projects">
                                     <a href="http://127.0.0.1:5500/matilde-gomes-portfolio/matilde-gomes-portfolio/index.html"
-                                        target="_blank" class="web-box">
+                                        target="_blank" rel="noopener noreferrer" class="web-box">
                                         <span>Website</span>
                                     </a>
                                     <a href="https://github.com/mjuliana98g/matilde-gomes-portfolio" target="_blank"
-                                        class="web-box">
+                                        rel="noopener noreferrer" class="web-box">
                                         <span>GitHub</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                     <!-- SLOT 2-->
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-card-header">
                             <h4 class="project-title">ESPAÇO RESERVADO</h4>
                         </div>
                         <div class="project-info">
                             <p class="description">Slot preparado para o próximo projeto.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
                 <!-- completed -->
                 <div id="completed" class="project-category-title">
@@ -527,23 +440,23 @@
                 </div>
                 <div class="projects-container">
                     <!-- SLOT 3-->
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-card-header">
                             <h4 class="project-title">ESPAÇO RESERVADO</h4>
                         </div>
                         <div class="project-info">
                             <p class="description">Slot reservado para futuros trabalhos concluídos.</p>
                         </div>
-                    </div>
+                    </article>
                     <!-- SLOT 4-->
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-card-header">
                             <h4 class="project-title">ESPAÇO RESERVADO</h4>
                         </div>
                         <div class="project-info">
                             <p class="description">Slot reservado para futuros trabalhos concluídos.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -554,4 +467,5 @@
         </footer>
     </main>
 </body>
+
 </html>
