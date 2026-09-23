@@ -114,7 +114,8 @@ body {
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, color 0.1s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
     color: black;
     background-color: var(--lime-green);
     box-shadow: 3px 3px 0 var(--dark-green);
@@ -158,7 +159,8 @@ body {
     transition: background-color 0.1s ease, color 0.1s ease;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
     color: black;
     background-color: var(--lime-green);
 }
@@ -327,7 +329,8 @@ body {
     transition: transform 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
 }
 
-.web-box:hover {
+.web-box:hover,
+.web-box:focus-visible {
     color: black;
     background-color: var(--lime-green);
     box-shadow: 3px 3px 0 var(--dark-green);
@@ -454,7 +457,8 @@ body {
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
 }
 
-.social-media-btn:hover {
+.social-media-btn:hover,
+.social-media-btn:focus-visible {
     background-color: var(--lime-green);
     box-shadow: 4px 4px 0 var(--dark-green);
     transform: translate(-1px, -1px);
@@ -476,7 +480,22 @@ body {
 }
 
 .skills-section input[type="radio"] {
-    display: none;
+    /* Escondido visualmente mas continua no fluxo do documento,
+       para se manter focável e navegável por teclado (Tab + setas) */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skills-section:has(input[type="radio"]:focus-visible) {
+    outline: 3px solid var(--lime-green);
+    outline-offset: -3px;
 }
 
 .skills-carousel-wrapper>div {
@@ -532,6 +551,7 @@ body {
     font-size: 0.8rem;
     font-weight: bold;
     text-align: center;
+    text-wrap: balance;
 }
 
 .suggestion-form-box {
@@ -697,7 +717,22 @@ body {
 }
 
 .reports-section input[type="radio"] {
-    display: none;
+    /* Escondido visualmente mas continua no fluxo do documento,
+       para se manter focável e navegável por teclado (Tab + setas) */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.reports-section:has(input[type="radio"]:focus-visible) {
+    outline: 3px solid var(--lime-green);
+    outline-offset: -3px;
 }
 
 .reports-carousel-container {
@@ -1040,8 +1075,7 @@ body {
     .skill-name {
         font-size: 0.6rem;
         line-height: 1.25;
-        word-break: break-word;
-        hyphens: auto;
+        overflow-wrap: break-word;
     }
 
     .suggestion-form-box {
@@ -1144,7 +1178,6 @@ body {
 
     .skill-name {
         line-height: 1.25;
-        word-break: break-word;
-        hyphens: auto;
+        overflow-wrap: break-word;
     }
 }
