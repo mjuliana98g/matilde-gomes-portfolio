@@ -4,12 +4,14 @@ Repositório oficial do meu portfólio pessoal, desenvolvido com uma identidade 
 
 ## Sobre o Projeto:
 
-Este projeto foi criado para marcar a minha transição de carreira para a área de TI (com especialização no ecossistema ServiceNow), unindo a minha bagagem analítica em ciências e investigação à programação web.
+Este projeto foi criado para marcar a minha transição de carreira para a área de TI (com especialização no ecossistema ServiceNow), unindo a minha bagagem analítica em ciências e investigação à programação web. Projeto Google Stitch: https://stitch.withgoogle.com/projects/10128712943858787012.
 
 ## Principais Características:
 
 **Design Temático:** Estética pixel art inspirada em jogos clássicos.
+
 **Bilingue:** Disponível em Português (index.html) e Inglês (index-en.html).
+
 **Secções Modulares:**
     
     Sobre Mim: Apresentação e links diretos (LinkedIn, GitHub, Email, CV).
